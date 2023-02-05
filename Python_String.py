@@ -122,7 +122,45 @@ print(data.strip()) # 결과 : 삼성전자
 # data1 = data.strip()
 # print(data1)
 
-'''다음과 같은 문자열이 있을 때 이를 대문자 BTC_KRW로 변경하세요.'''
+'''다음과 같은 문자열이 있을 때 이를 대문자 BTC_KRW로 변경. [upper 메서드]'''
 
 ticker = "btc_krw"
 print(ticker.upper()) # 결과 : BTC_KRW
+# upper()메서드는 모든 알파벳을 대문자로 변경
+
+'''다음과 같은 문자열이 있을 때 이를 소문자 btc_krw로 변경. [lower 메서드]'''
+
+ticker1 = "BTC_KRW"
+print(ticker.lower()) # 결과 : btc_krw
+# lower()메서드는 모든 알파벳을 소문자로 변경
+
+'''문자열 'hello'가 있을 때 이를 'Hello'로 변경 [Capitalize 메서드]'''
+Q043 = "hello"
+print(Q043.capitalize()) # 결과 : Hello
+# capitalize() 메서드는 맨 앞 알파벳을 대문자로 바꾼다.
+
+'''파일 이름이 문자열로 저장되어 있을 때 endswith 메서드를 사용해서 파일 이름이 'xlsx'로 끝나는지 확인 [endswith메서드]''' 
+file_name = "보고서.xlsx"
+print(file_name.endswith('xlsx')) # 결과 : True
+# file_nameendswith(value, start, end)
+# [endswith 메서드의 매개변수]
+# -value -> 필수. 체크할 '끝나는 값' 지정. (ex: 문자열, 문자, 숫자 등...)
+# -start -> 선택. 검색 시작 위치 나타내는 정수. (기본값: 0)
+# -end -> 선택. 검색 종료 위치 나타내는 정수. (기본값: 문자열 끝) 포함 X
+
+''' endswith()메서드로 2개 이상의 문자열도 확인할수 있을까?'''
+file_name.endswith(('xlsx','abcd')) # 결과 : True
+file_name.endswith(('abcd','xlsx')) # 결과 : True
+# 2개 이상의 문자열을 확인할 때는 괄호를 2개 사용해야 한다.
+# 여러가지 매개변수 중에서 하나라도 포함되어 있으면 True값을 반환한다.
+
+''' endswith()메서드 매개변수 전부 사용해서 결과확인해보기'''
+print(file_name.endswith('x', 0, 3)) #결과 : False
+print(file_name.endswith('x', 0, 5)) #결과 : True
+
+# 'x'문자열은 4번째부터 존재하므로 검색 종료 위치가 3에서 끝나면 False값이 출력된다.
+# 'x'문자열이 5번째까지 검색하므로 4번째에서 확인이 되어 True값이 출력된다.
+
+
+
+

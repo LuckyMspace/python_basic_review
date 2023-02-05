@@ -12,3 +12,7 @@
 
 """TypeError: replace expected at most 3 arguments, got 4"""
 # Replace 메서드에서 발생한 에러. '최대 3개의 인수를 교체해야 합니다. 4개를 받았습니다'
+
+"""endswith() takes at least 1 argument (0 given)"""
+# endswith() 메서드를 공백으로 입력했을때 발생했다.
+# 어떤 문자열이 확인하는 것이기 때문에 문자열을 입력해 줘야한다.
