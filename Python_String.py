@@ -47,6 +47,7 @@ url = "http://sharebook.kr"
 # url_split = url.split(".") 
 # print(url_split)                # 결과 : 'http://sharebook', 'kr'
 # split함수는 정상적으로 작동하였지만 예시를 만족하지 못했다.
+
 url_split = url.split(".")
 print(url_split[-1]) # 결과 : kr
 # 문자열.split(sep, maxsplit) 함수는 문자열을 maxsplit 횟수만큼 sep의 구분자를 기준으로 문자열을 구분하여 잘라서 리스트로 만든다.
@@ -64,3 +65,31 @@ print(string.replace('a','A')) # 결과 : Abcdfe2A354A32A
 '''그렇다면 한 replace메서드에서 한번에 여러 문자열을 바꾸는 것도 가능한가?'''
 # print(string.replace('a','A','b','B'))
 # TypeError: replace expected at most 3 arguments, got 4 [에러발생]
+
+'''아래 코드의 실행 결과는?'''
+
+a = "3"
+b = "4"
+print(a + b)    # 결과 : 34
+# 무의식적으로 7으로 예상했다. '"'를 사용했기 때문에 숫자이지만 문자열인것을 확인하자.
+
+'''변수에 다음과 같이 문자열과 정수가 바인딩되어 있을 때 % formatting을 사용해서 다음과 같이 출력.'''
+
+name1 = "박동수" 
+age1 = 10
+name2 = "김현광"
+age2 = 13
+#이름: 박동수 나이: 10
+#이름: 김현광 나이: 13
+
+#print("이름 :" , name1, " 나이:", age1)
+# 위 방식도 예시되로 출력되지만 %formatting을 사용하지 못했다.
+
+print("이름: %s 나이: %d" % (name1, age1)) # 결과 : '이름: 박동수 나이: 10'
+print("이름: %s 나이: %d" % (name2, age2)) # 결과 : '이름: 김현광 나이: 13'
+#print 포맷팅에서 `%s`는 문자열 데이터 타입의 값을 `%d`는 정수형 데이터 타입 값의 출력을 의미
+
+'''문자열의 format( ) 메서드를 사용해서 위 문제를 다시 풀어보자'''
+print("이름: {} 나이: {}".format(name1, age1))
+print("이름: {} 나이: {}".format(name2, age2))
+
