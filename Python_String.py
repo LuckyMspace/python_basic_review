@@ -149,8 +149,8 @@ print(file_name.endswith('xlsx')) # 결과 : True
 # -end -> 선택. 검색 종료 위치 나타내는 정수. (기본값: 문자열 끝) 포함 X
 
 ''' endswith()메서드로 2개 이상의 문자열도 확인할수 있을까?'''
-file_name.endswith(('xlsx','abcd')) # 결과 : True
-file_name.endswith(('abcd','xlsx')) # 결과 : True
+print(file_name.endswith(('xlsx','abcd'))) # 결과 : True
+print(file_name.endswith(('abcd','xlsx'))) # 결과 : True
 # 2개 이상의 문자열을 확인할 때는 괄호를 2개 사용해야 한다.
 # 여러가지 매개변수 중에서 하나라도 포함되어 있으면 True값을 반환한다.
 
@@ -160,6 +160,25 @@ print(file_name.endswith('x', 0, 5)) #결과 : True
 
 # 'x'문자열은 4번째부터 존재하므로 검색 종료 위치가 3에서 끝나면 False값이 출력된다.
 # 'x'문자열이 5번째까지 검색하므로 4번째에서 확인이 되어 True값이 출력된다.
+
+'''파일 이름이 문자열로 저장되어 있을 때 startswith 메서드를 사용해서 파일 이름이 '2020'로 시작하는지 확인[startswith 메서드]'''
+file_name1 = "2020_보고서.xlsx"
+print(file_name1.startswith('2020')) # 결과 : True
+
+# endswith()메서드와 비슷한 개념이다.
+
+'''다음과 같은 문자열이 있을 때 공백을 기준으로 문자열을 나누기 [split 메서드].'''
+
+q47 = "hello world"
+print(q47.split(" ")) # 결과 : ['hello', 'world']
+# .split()으로 완전 공백으로 해도 띄어쓰기를 기준으로 문자열이 나눠진다.
+# 리스트형으로 만든다.
+
+
+'''문자열의 오른쪽에 공백이 있을 때 이를 제거.[rstrip 메서드]'''
+
+q50 = "039490     "
+print(q50.rstrip()) # 결과 : ['039490']
 
 
 
