@@ -19,3 +19,10 @@
 
 """ leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers """
 # 10진수에서 정수가 0으로 시작할 때 발생
+
+""" 'IndexError: list index out of range' """
+# range() 메서드에서 최대범위를 초과하는 정수값이 입력되면 발생하는 오류다.
+# 오류 예시 : 
+# price_list = [32100, 32150, 32000, 32500]
+# for q171 in range(5):
+#    print(price_list[q171])
